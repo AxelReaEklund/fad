@@ -14,12 +14,42 @@ function App() {
         <Router>
             <Header />
             <Navigation />
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/portfolio" element={<Portfolio />} />
-                <Route path="/bin" element={<Bin />} />
-                <Route path="/about" element={<About />} />
-            </Routes>
+            <div className="relative">
+                <Routes>
+                    <Route
+                        path="/"
+                        element={
+                            <div className="fixed top-0 left-0 w-screen h-screen bg-white z-50">
+                                <Home />
+                            </div>
+                        }
+                    />
+                    <Route
+                        path="/portfolio"
+                        element={
+                            <div className="fixed top-0 left-0 w-screen h-screen bg-white z-50">
+                                <Portfolio />
+                            </div>
+                        }
+                    />
+                    <Route
+                        path="/bin"
+                        element={
+                            <div className="fixed top-0 left-0 w-screen h-screen bg-white z-50">
+                                <Bin />
+                            </div>
+                        }
+                    />
+                    <Route
+                        path="/about"
+                        element={
+                            <div className="fixed top-0 left-0 w-screen h-screen bg-white z-50">
+                                <About />
+                            </div>
+                        }
+                    />
+                </Routes>
+            </div>
             <SocialLinks />
         </Router>
     );

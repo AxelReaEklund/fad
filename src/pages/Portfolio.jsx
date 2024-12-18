@@ -1,7 +1,10 @@
-import React from "react";
 
 function Portfolio() {
-    return <h2>Portfolio Page</h2>;
+    return (
+        <div className="flex flex-col min-h-screen">
+            <h2 className="text-4xl font-bold mb-4 m-10 text-center">Portfolio</h2>
+        </div>
+    );
 }
 
 export default Portfolio;
