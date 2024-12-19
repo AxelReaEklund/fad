@@ -2,14 +2,14 @@ import { Link } from "react-router-dom";
 
 function Navigation() {
     return (
-        <nav className="flex flex-col h-full items-start items-center">
-            <Link to="/portfolio" className="text-lg text-blue-500 hover:text-blue-700">
+        <nav className="flex flex-col justify-center items-center h-full">
+            <Link to="/portfolio" className="text-2xl text-textPrimary hover:text-textSecondary my-3.5 tracking-widest">
                 Portfolio
             </Link>
-            <Link to="/bin" className="text-lg text-blue-500 hover:text-blue-700">
+            <Link to="/bin" className="text-2xl text-textPrimary hover:text-textSecondary my-3.5 tracking-widest">
                 The Bin
             </Link>
-            <Link to="/about" className="text-lg text-blue-500 hover:text-blue-700">
+            <Link to="/about" className="text-2xl text-textPrimary hover:text-textSecondary my-3.5 tracking-widest">
                 About
             </Link>
         </nav>

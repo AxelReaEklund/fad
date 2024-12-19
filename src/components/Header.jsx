@@ -1,10 +1,13 @@
+
 function Header() {
     return (
-        <header className="text-center my-6">
-            <h1 className="text-4xl font-extrabold text-gray-900 leading-tight">
-                FAD
-            </h1>
-        </header>
+        <div className="">
+            <header className="text-center">
+                <h1 className="text-7xl font-extrabold text-textPrimary tracking-widest">
+                    FAD
+                </h1>
+            </header>
+        </div>
     );
 }
 
