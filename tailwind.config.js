@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#1E3A8A", // Deep blue
+        primary: "#EC4899", // Deep blue
         secondary: "#64748B", // Gray-blue
         accent: "#F43F5E", // Red-pink
         background: "#000000", // Light background
