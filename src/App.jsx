@@ -1,13 +1,9 @@
-import React from "react";
 import './index.css';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import Header from "./components/Header";
-import Navigation from "./components/Navigation";
 import Portfolio from "./pages/Portfolio";
 import Bin from "./pages/Bin";
 import About from "./pages/About";
-import SocialLinks from "./components/SocialLinks.jsx";
 
 function App() {
     return (
