@@ -10,17 +10,17 @@ function About() {
     };
 
     return (
-        <div className="flex flex-col items-center justify-between min-h-screen bg-black text-white px-6 py-10">
+        <div className="flex flex-col items-center justify-between min-h-screen bg-background text-white px-6 py-10">
 
             {/* Back Icon */}
-            <BackButton to="/" />
+            <BackButton to="/"/>
 
             {/* Header */}
             <h1 className="text-5xl font-bold tracking-wide text-center mt-10">ABOUT</h1>
 
             {/* Image/Illustration */}
             <div className="mt-16 mb-8">
-                <img src={PersonStanding} alt="Person Standing" className="h-64 w-auto" />
+                <img src={PersonStanding} alt="Person Standing" className="h-64 w-auto"/>
             </div>
 
             {/* Description */}
@@ -31,10 +31,12 @@ function About() {
             {/* Subscribe Button */}
             <button
                 onClick={togglePopup}
-                className="mb-20 mt-10 px-6 py-2 border border-white uppercase text-sm tracking-widest hover:bg-white hover:text-black transition-all"
+                className="mb-20 mt-10 px-6 py-2 border border-white uppercase text-sm tracking-widest relative overflow-hidden group"
             >
-                Subscribe to Newsletter
+                <span className="absolute inset-0 bg-white transition-transform transform scale-x-0 origin-center group-hover:scale-x-100 duration-250 ease-out"></span>
+                <span className="relative z-10 text-white group-hover:text-black transition-colors duration-500 ease-out">Subscribe to Newsletter</span>
             </button>
+
 
             {/* Popup */}
             {isPopupOpen && (

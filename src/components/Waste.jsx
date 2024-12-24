@@ -1,26 +1,35 @@
-import { FaPlay } from "react-icons/fa"; // Importing play icon
+import { FaPlay } from "react-icons/fa";
 import PropTypes from "prop-types";
-import sampleSound from "../assets/sample_song_files/CantinaBand60.wav"; // Import the sound file
 
-function Waste({ name }) {
-    const playSound = () => {
-        const audio = new Audio(sampleSound);
-        audio.play();
+function Waste({ name, soundFile, setUrl }) {
+    const changeSong = async () => {
+        try {
+            const audioModule = await import(`../assets/sample_song_files/${soundFile}.wav`);
+            setUrl(audioModule.default); // Update the URL in the MusicPlayerPopup
+        } catch (error) {
+            console.error("Error loading sound file:", error);
+        }
     };
 
     return (
-        <div className="h-fit w-fit flex items-center space-x-2 bg-black text-white px-4 py-2 border border-white">
-            <span className="font-bold">{name}</span>
-            <button onClick={playSound}>
+        <div
+            className="relative w-[168px] h-[48px]
+            flex items-center justify-between
+            bg-black text-white tracking-wider
+            px-5 border border-white rounded-xl"
+        >
+            <span className="font-bold truncate">{name}</span>
+            <button onClick={changeSong}>
                 <FaPlay className="text-white" />
             </button>
         </div>
     );
 }
 
-// Add prop-types validation
 Waste.propTypes = {
-    name: PropTypes.string.isRequired, // Ensure 'txt' is a required string
+    name: PropTypes.string.isRequired,
+    soundFile: PropTypes.string.isRequired,
+    setUrl: PropTypes.func.isRequired, // Add validation for setUrl
 };
 
 export default Waste;

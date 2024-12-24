@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 body {
-    @apply bg-gray-100; /* Example background color */
+    @apply bg-background; /* Example background color */
 }

@@ -22,7 +22,7 @@ function Bin() {
     };
 
     return (
-        <div className="flex flex-col items-center min-h-screen bg-black text-white relative">
+        <div className="flex flex-col items-center min-h-screen bg-background text-white relative">
             <BackButton to="/" className="absolute top-4 left-4" />
 
             <h2 className="text-4xl font-bold mt-36 text-center tracking-widest">
